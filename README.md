@@ -8,26 +8,30 @@ Each of the following scripts contains a detailed description at the beginning o
 ```MATLAB
 ShapeFunction.m
 ```
-This code computes the *p*-fold shape function of epithelial monolayers, defined as
+This script computes the *p*-fold shape function of epithelial monolayers, defined as
 ```math
-\gamma_p = \frac{\sum_{v=1}^{V}|\boldsymbol{r}_{v}|^{p}e^{ip\phi_{v}}}{\sum_{v=1}^{V}|\boldsymbol{r}_{v}|^{p}}
+\gamma_p = \frac{\sum_v |\boldsymbol{r}_{v}|^{p}e^{ip\phi_{v}}}{\sum_v |\boldsymbol{r}_v|^p}
 ```
-where $\boldsymbol{r}_{v}=\{x_{v},y_{v}\}$ and $\phi_{v}=\arctan(y_{v}/x_{v})$, with $v=1,\,2\ldots\,V$, are the position and orientation of the $v-$th vertex of a $V-$sided polygon representing the contour of a segmented cell. 
+where $`\boldsymbol{r}_{v}=\{x_{v},y_{v}\}`$ and $`\phi_{v}=\arctan(y_{v}/x_{v})`$, with $`v=1,\,2\ldots\,V`$, are the position and orientation of the $`v-`$th vertex of a $`V-`$sided polygon representing the contour of a segmented cell. 
 
 ```MATLAB
 ShapeParameter.m
 ```
-This code coarse-grains the shape functions, *gamma_g*, over a given length scale and computes the shape parameter, *Gamma_p*, as show in Eq.(3) in the above reference.
+This script compute the *p*-fold shape parameter of epithelial monolayers, defined upon coarse-graining the shape function $`\gamma_p`$ over the length scale $`R`$. That is
+```math
+\Gamma_p = \langle \gamma_p \rangle_R 
+```
+where the average $`\langle\cdots\rangle_R`$ denotes an average over all the cells whose center lies within a distance $`R`$ from the point at which $`\Gamma_p`$ is computed.
 
 ```MATLAB
 plot_orientation_field_single_cell.m
 ```
-This code uses the shape functions, *gamma_p*, to plot the nematic (p=2) and hexatic (p=6) orientation fields of each cell.
+This code uses the shape functions, $`\gamma_p`$, to plot the nematic ($`p=2`$) and hexatic ($`p=6`$) orientation fields of each cell.
 
 ```MATLAB
 plot_coarse_grained_orientation_field.m
 ```
-This code uses the shape parameters, *Gamma_p*, to plot the coarse-grained nematic (p=2) and hexatic (p=6) orientation field for a given length scale. The orientation field is superimposed with topological defects. 
+This code uses the shape parameters, $`\Gamma_p`$, to plot the coarse-grained nematic ($`p=2`$) and hexatic ($`p=6`$) orientation field for a given length scale. The orientation field is superimposed with topological defects. 
 
 ### EXAMPLE:
 
