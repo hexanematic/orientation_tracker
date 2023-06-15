@@ -9,9 +9,9 @@ Each of the following scripts contains a detailed description at the beginning o
 ShapeFunction.m
 ```
 This code computes the *p*-fold shape function of epithelial monolayers, defined as
-$$
+```math
 \gamma_p = \frac{\sum_{v=1}^{V}|\boldsymbol{r}_{v}|^{p}e^{ip\phi_{v}}}{\sum_{v=1}^{V}|\boldsymbol{r}_{v}|^{p}}
-$$ 
+```
 where $\boldsymbol{r}_{v}=\{x_{v},y_{v}\}$ and $\phi_{v}=\arctan(y_{v}/x_{v})$, with $v=1,\,2\ldots\,V$, are the position and orientation of the $v-$th vertex of a $V-$sided polygon representing the contour of a segmented cell. 
 
 ```MATLAB
