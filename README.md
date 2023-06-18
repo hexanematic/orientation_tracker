@@ -1,6 +1,24 @@
 ### Cite as:
 Armengol-Collado *et al.*, "Epithelia are multiscale active liquid crystals", Nat. Phys. (2023).
 
+### Data:
+The folder 'data' contains the data support the findings of this study. 
+The subfolders are organized as follows.
+
+Folder 'dat' contains text file named 'exp_#.dat', with # a number ranging from 1 to 68 (corresponding to each analyzed experimental configuration).
+Each line in these files refers to a cell in the correspondig microscopy picture.
+The first column contains the x-coordinate of the centre of mass of the cell. 
+The second column contains the y-coordinate of the centre of mass of the cell. 
+The third column contains the real part of the complex shape function gamma_2 of the cell. 
+The fourth column contains the imaginary part of the complex shape function gamma_2 of the cell. 
+The fifth column contains the real part of the complex shape function gamma_3 of the cell and so on.
+
+Folder 'mat' contain Matlab files 'Image#_Polygon.mat' contains the centre of mass per cell and the vertices per cell, for the corresponding image.
+
+Folder 'tif' contains experimental microscopy pictures named 'image#.tif'
+
+Folder 'xlsx' contains spreadsheets with the source data presented in Armengol-Collado et al. 2023 (Nature Physics).
+
 ### Scripts:
 
 Each of the following scripts contains a detailed description at the beginning of the script.
